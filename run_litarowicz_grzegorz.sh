@@ -4,7 +4,7 @@ command=$1
 
 #clone
 if [ "$command" = "clone" ]; then
-    echo cloning repo...
+    echo [CLONE] Klonowanie repo...
     git clone https://github.com/BIGbadEL/Grzegorz-Litarowicz---assembler-x86-and-x86-64.git
 fi
 
@@ -13,15 +13,17 @@ if [ "$command" = "solution" ]; then
     echo [SOLUTION] Pobieranie repo wraz z rozwiązaniami
     git clone https://github.com/Blinkuu/assembler-x86-and-x86-64.git
     mkdir exercises/ex01-solution
+    echo [SOLUTION] Przenoszenie rozwiązań do folderu exercises/ex01-solution/
     cp exercises/ex01/* exercises/ex01-solution/
     cat assembler-x86-and-x86-64/exercises/ex01/input.asm > exercises/ex01-solution/is_triangle.asm
     cp assembler-x86-and-x86-64/exercises/ex01/functions.asm exercises/ex01-solution/
     cd exercises/ex01-solution/
-    ./run.sh is_triangle test
 fi
 
 if [ "$command" = "run" ]; then
     echo [RUN]: zadanie znajduje się w exercises/ex01/
+    docker build -t grzegorzlitarowicz:1.0 .
+    docker run -it grzegorzlitarowicz:1.0
 fi
 
 if [ "$command" = "clean" ]; then
