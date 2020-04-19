@@ -24,5 +24,10 @@ if [ "$command" = "run" ]; then
 fi
 
 if [ "$command" = "clean" ]; then
-    rm -r Grzegorz-Litarowicz---assembler-x86-and-x86-64
+    if [[ ! -d "Grzegorz-Litarowicz---assembler-x86-and-x86-64" ]]
+    then
+        cd .. 
+    fi
+    rm -rf Grzegorz-Litarowicz---assembler-x86-and-x86-64
+    echo cloning repo with solutions...
 fi
