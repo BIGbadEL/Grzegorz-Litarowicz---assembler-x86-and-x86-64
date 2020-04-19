@@ -13,3 +13,19 @@
 ; Do kompilacji i uruchamiania programu można korzystać ze skryptu run.sh:
 ; ./run.sh is_triangle
 ; 
+
+
+
+; Przykład 1:
+;
+; Please enter number: 5
+; Please enter number: 5
+; Please enter number: 5
+; Yes
+; 
+; Przykład 2:
+;
+; Please enter number: 1
+; Please enter number: 1
+; Please enter number: 9
+; No
