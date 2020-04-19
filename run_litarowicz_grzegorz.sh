@@ -10,13 +10,13 @@ fi
 
 #solution
 if [ "$command" = "solution" ]; then
-    echo [solution] Pobieranie repo wraz z rozwiązaniami
+    echo [SOLUTION] Pobieranie repo wraz z rozwiązaniami
     git clone https://github.com/Blinkuu/assembler-x86-and-x86-64.git
     mkdir exercises/ex01-solution
     cp exercises/ex01/* exercises/ex01-solution/
     cat assembler-x86-and-x86-64/exercises/ex01/input.asm > exercises/ex01-solution/is_triangle.asm
     cp assembler-x86-and-x86-64/exercises/ex01/functions.asm exercises/ex01-solution/
-    cd exercises/ex01/
+    cd exercises/ex01-solution/
     ./run.sh is_triangle test
 fi
 
