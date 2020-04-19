@@ -15,7 +15,6 @@ if [ "$command" = "solution" ]; then
     echo [SOLUTION] Przenoszenie rozwiązań do folderu exercises/ex01/
     cat assembler-x86-and-x86-64/exercises/ex01/input.asm > exercises/ex01/is_triangle.asm
     cp assembler-x86-and-x86-64/exercises/ex01/functions.asm exercises/ex01/
-    cd exercises/ex01/
     docker build -t grzegorzlitarowicz:1.0 .
     docker run -it grzegorzlitarowicz:1.0
 fi
