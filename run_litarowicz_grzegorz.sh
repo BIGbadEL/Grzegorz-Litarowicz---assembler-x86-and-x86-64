@@ -10,6 +10,10 @@ fi
 
 if [ "$command" = "run" ]; then
     echo [RUN]: zadanie znajduje się w exercises/ex01/
+    echo [RUN]: W przypadku nie powodzenia następnch komend konieczne może być wykonanie następujących:
+    echo [RUN]: sudo groupadd docker
+    echo [RUN]: sudo usermod -aG docker \$"USER"
+    echo [RUN]: newgrp docker 
     docker build -t grzegorzlitarowicz:1.0 .
     docker run -it grzegorzlitarowicz:1.0
 fi
