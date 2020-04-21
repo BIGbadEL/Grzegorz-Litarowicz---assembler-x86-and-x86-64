@@ -26,5 +26,4 @@ if [ "$command" = "clean" ]; then
     fi
     echo [CLEAN]: usuwanie Grzegorz-Litarowicz---assembler-x86-and-x86-64
     rm -rf Grzegorz-Litarowicz---assembler-x86-and-x86-64
-    rm run_litarowicz_grzegorz.sh
 fi
